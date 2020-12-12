@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup as bs
 
 
 def init_browser():
-    executable_path = {'chromedriver':'../Documents/chromedriver'}
+    executable_path = {'chromedriver':'/usr/local/bin/chromedriver'}
     return Browser('chrome', executable_path, headless=False)
 
 
@@ -25,7 +25,7 @@ def init_browser():
 
 
 def scrape_info():
-    browser = init_broswer()
+    browser = init_browser()
     final_dict = {}
     
     # Visit NASA Mars News Site 

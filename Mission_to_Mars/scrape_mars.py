@@ -67,13 +67,29 @@ def scrape_info():
     # Save both the image url string for the full resolution hemisphere image and...
     # ...the Hemisphere title containing the hemisphere name. Use a Python dictionary to...
     # store data and append the dict. with the img-url string and hemi title
+    all_hemis = hemis_soup.find('div', class_='collapsible results')
+    find_hemis = all_hemis.find_all('div', class_='item')
+    hemisphere_image_urls = []
+    for i in find_hemis:
+        hemisphere = i.find('div', class_='description')
+        title = hemisphere.h3.text
+        hemis_link = hemisphere.a["href"]
+        browser.visit("https://astrogeology.usgs.gov"+hemis_link)
+        img_html = browser.html
+        img_soup = bs(img_html, 'html.parser')
+        img_link = img_soup.find('div', class_='downloads')
+        img_url = img_link.find('li').a['href']
+        img_dict = {}
+        img_dict['title'] = title
+        img_dict['img_url'] = img_url
+        hemisphere_image_urls.append(img_dict)
     
-    
-    
+    # Create final dictionary to hold all scraped data for our index.html
     final_dict = {'news_title':news_title,
                  'news_p':news_p,
                  'featured_img_url':featured_img_url,
-                 'fact_table':str(html_table)}
+                 'fact_table':str(html_table),
+                 'hemis_imgs':hemisphere_image_urls}
     
     return final_dict
 

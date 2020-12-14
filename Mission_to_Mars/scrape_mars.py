@@ -34,8 +34,8 @@ def scrape():
     img_soup = bs(html, "html.parser")
     
     # Scrape full size image link
-    img_path = img_soup.find_all('img')[0]["src"]
-    featured_img_url = jpl_url + img_path
+    img_path = img_soup.find('img')[0]["src"]
+    featured_img_url = "https://www.jpl.nasa.gov/"+img_path
     
     # Visit the Mars Facts webpage and scrape for facts including diameter, mass, etc.
     # Save these values in a HTML table string

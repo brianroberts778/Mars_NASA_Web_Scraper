@@ -24,7 +24,7 @@ def init_browser():
 # In[43]:
 
 
-def scrape_info():
+def scrape():
     browser = init_browser()
     final_dict = {}
     

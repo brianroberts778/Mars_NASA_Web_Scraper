@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[39]:
-
-
 # Import Dependencies
 import pandas as pd
 import requests
@@ -12,17 +9,9 @@ from flask import Flask, render_template
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 
-
-# In[42]:
-
-
 def init_browser():
     executable_path = {'chromedriver':'/usr/local/bin/chromedriver'}
     return Browser('chrome', executable_path, headless=False)
-
-
-# In[43]:
-
 
 def scrape():
     browser = init_browser()
@@ -92,9 +81,6 @@ def scrape():
                  'hemis_imgs':hemisphere_image_urls}
     
     return final_dict
-
-
-# In[ ]:
 
 
 

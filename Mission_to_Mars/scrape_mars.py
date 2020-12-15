@@ -28,14 +28,15 @@ def scrape():
     news_p = news_soup.find_all('div', class_='article_teaser_body')[0].text
     
     # Visit the JPL Mars Space Site and scrap featured images
+    jpl_home = "https://www.jpl.nasa.gov"
     jpl_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(jpl_url)
     html = browser.html
-    img_soup = bs(html, "html.parser")
+    img_soup = bs(html, 'html.parser')
     
     # Scrape full size image link
-    img_path = img_soup.find('img')[0]["src"]
-    featured_img_url = "https://www.jpl.nasa.gov/"+img_path
+    img_path = img_soup.find_all('img')[0]["src"]
+    featured_img_url = jpl_home + img_path
     
     # Visit the Mars Facts webpage and scrape for facts including diameter, mass, etc.
     # Save these values in a HTML table string
@@ -78,7 +79,8 @@ def scrape():
                  'news_p':news_p,
                  'featured_img_url':featured_img_url,
                  'fact_table':str(html_table),
-                 'hemis_imgs':hemisphere_image_urls}
+                 'hemis_imgs':hemisphere_image_urls
+                 }
     
     return final_dict
 

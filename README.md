@@ -1,47 +1,49 @@
-# web_scraping_challenge
+# Mars NASA Web Scraper
 
-Web Scraping Homework - Mission to Mars
+Web Scraping - Mission to Mars
 
 Step 1 - Scraping
-Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
+Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
-Create a Jupyter Notebook file called mission_to_mars.ipynb and use this to complete all of your scraping and analysis tasks. The following outlines what you need to scrape.
+Create a Jupyter Notebook file called mission_to_mars.ipynb and use this to complete all scraping and analysis tasks. The following outlines scraping requirements.
 
 
-NASA Mars News
+**NASA Mars News**
 
 Scrape the NASA Mars News Site and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
 
-JPL Mars Space Images - Featured Image
+**JPL Mars Space Images - Featured Image**
 
 
-Visit the url for JPL Featured Space Image here.
+Visit the url for the JPL Featured Space Image.
 
 
 Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called featured_image_url.
 
 
-Make sure to find the image url to the full size .jpg image.
+(Make sure to find the image url to the full size .jpg image.)
 
 
-Make sure to save a complete url string for this image.
+(Make sure to save a complete url string for this image.)
 
-Mars Facts
+**Mars Facts**
 
 Visit the Mars Facts webpage here and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 
 Use Pandas to convert the data to a HTML table string.
 
-Mars Hemispheres
+**Mars Hemispheres**
 
 Visit the USGS Astrogeology site here to obtain high resolution images for each of Mar's hemispheres.
 
-You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
+Click each of the links to the hemispheres in order to find the image url to the full resolution image.
 
-Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys img_url and title.
+Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. 
+Use a Python dictionary to store the data using the keys img_url and title.
 
 Append the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
 
+------------------------------------------------
 Step 2 - MongoDB and Flask Application
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 

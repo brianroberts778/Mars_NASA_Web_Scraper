@@ -56,3 +56,8 @@ Store the return value in Mongo as a Python dictionary.
 Create a root route / that will query your Mongo database and pass the mars data into an HTML template to display the data.
 
 Create a template HTML file called index.html that will take the mars data dictionary and display all of the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design.
+
+<img width="1013" alt="mars2" src="https://user-images.githubusercontent.com/70656160/113902174-9c20ff80-979d-11eb-862f-a0a885cd1cd7.png">
+
+
+

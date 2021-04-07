@@ -59,5 +59,5 @@ Create a template HTML file called index.html that will take the mars data dicti
 
 <img width="1013" alt="mars2" src="https://user-images.githubusercontent.com/70656160/113902174-9c20ff80-979d-11eb-862f-a0a885cd1cd7.png">
 
-
+<img width="574" alt="mars1" src="https://user-images.githubusercontent.com/70656160/113902245-ad6a0c00-979d-11eb-9270-351d17ebc8dd.png">
 
